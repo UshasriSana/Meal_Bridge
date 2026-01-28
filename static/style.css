@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("/static/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.page-title {
+  color: white;
+  margin-top: 30px;
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.95);
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.food-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+  color: #444;
+}
+
+.food-row span,
+.food-row a {
+  margin-left: 5px;
+  color: #222;
+}
+
+.food-row a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.food-row a:hover {
+  text-decoration: underline;
+}
+
+.accept-btn {
+  display: block;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.accept-btn:hover {
+  background: #218838;
+}

@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Available Food</h2>
+
+    {% for food in foods %}
+    <div class="card">
+        <p><b>Source:</b> {{food[1]}}</p>
+        <p><b>People:</b> {{food[2]}}</p>
+        <p><b>Type:</b> {{food[3]}}</p>
+        <p><b>Location:</b> <a href="{{food[4]}}" target="_blank">View Map</a></p>
+        <a href="{{ food[4] }}" target="_blank">Open in Google Maps</a>
+        <p><b>Expiry:</b> {{food[5]}}</p>
+        <p><b>Contact:</b> {{food[6]}}</p>
+        <p><b>Status:</b> {{food[8]}}</p>
+
+        <a href="/accept/{{food[0]}}" class="btn">Accept Food</a>
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
+
+{% endfor %}
