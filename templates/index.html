@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>MealBridge</title>
-    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Correct CSS linking -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <div class="container">
-        <h1>MEALBRIDGE</h1>
-        <p>Collecting Leftovers, Connecting Lives</p>
+
+<body class="hero">
+
+    <div class="overlay">
+        <h1>MealBridge</h1>
+        <p>Collecting leftovers, connecting lives ❤️</p>
+
         <a href="/login" class="btn">Get Started</a>
     </div>
+
 </body>
 </html>

@@ -1,62 +1,216 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url("/static/background.jpg") no-repeat center center fixed;
-  background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background-image: url("{{ url_for('static', filename='food.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .page-title {
-  color: white;
-  margin-top: 30px;
+    color: orange;
+    font-size: 42px;      /* change size here */
+    font-weight: bold;
+    text-align: center;   /* center title */
+    margin-top: 40px;
 }
 
 .food-card {
-  background: rgba(255, 255, 255, 0.95);
-  width: 350px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  text-align: left;
+    background: rgba(255, 255, 255, 0.95);
+    width: 380px;
+    margin: 25px auto;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    color: #333;
 }
 
 .food-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;          /* space between lines */
+    margin-bottom: 15px;
 }
 
 .label {
-  font-weight: bold;
-  color: #444;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 15px;
 }
+
 
 .food-row span,
 .food-row a {
-  margin-left: 5px;
-  color: #222;
+    margin-left: 0;      /* remove left shift */
+    color: #222;
 }
 
+
 .food-row a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: 600;
+}
+.food-row a:hover {
+    text-decoration: underline;
+}
+.accept-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 12px;
+    text-align: center;
+    background: #28a745;
+    color: white;        /* FIX */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.accept-btn:hover {
+    background: #218838;
+}
+.accept-btn:hover {
+    background: #218838;
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+.food-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Container */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Form layout */
+.donor-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each field */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.submit-btn {
+  padding: 14px;
+  background: #ff7a18;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #e56700;
+}
+/* ===== GLOBAL PAGE STYLE ===== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  margin: 0;
+  padding: 0;
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  color: #ff7a18;
+  margin-top: 30px;
+}
+
+/* Universal container */
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Universal form layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Each field */
+form input,
+form select,
+form button {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Button style */
+form button {
+  background: #ff7a18;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #e56700;
+}
+
+/* Links */
+a {
   color: #007bff;
   text-decoration: none;
 }
 
-.food-row a:hover {
+a:hover {
   text-decoration: underline;
-}
-
-.accept-btn {
-  display: block;
-  margin-top: 15px;
-  padding: 10px;
-  text-align: center;
-  background: #28a745;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-}
-
-.accept-btn:hover {
-  background: #218838;
 }
